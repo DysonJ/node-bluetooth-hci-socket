@@ -216,9 +216,9 @@ setFilter();
 bluetoothHciSocket.start();
 
 console.log('isDevUp = ' + bluetoothHciSocket.isDevUp());
-
+const advertData = new Buffer('test data', 'hex')
 setAdvertiseEnable(false);
 setAdvertisingParameter();
 setScanResponseData(new Buffer('0909657374696d6f74650e160a182eb8855fb5ddb601000200', 'hex'));
-setAdvertisingData(Buffer.from('My Test Device'));
+setAdvertisingData(advertData);
 setAdvertiseEnable(true);
